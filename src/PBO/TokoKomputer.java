@@ -10,22 +10,22 @@ package PBO;
  * @author AmangArap
  */
 class TokoKomputer {
-    // Attribut
+    // Atribut
     private Barang[] daftarBarang;
-    
+
     // Constructor
     public TokoKomputer(Barang[] daftarBarang) {
         this.daftarBarang = daftarBarang;
     }
-    
-    // Method umtuk menampilkan daftar barang di toko Komputer
+
+    // Method untuk menampilkan daftar barang di toko komputer
     public void tampilkanDaftarBarang() {
-        System.out.println("Daftar Barang di Toko Komputer Rafli");
+        System.out.println("Daftar Barang di Toko Komputer:");
         for (Barang barang : daftarBarang) {
-            System.out.println(barang.getNama() + " = Rp" + barang.getHarga());
+            System.out.println(barang.getNama() + " - Rp" + barang.getHarga());
         }
     }
-    
+
     // Method untuk mencari barang berdasarkan nama
     public Barang cariBarang(String nama) {
         for (Barang barang : daftarBarang) {

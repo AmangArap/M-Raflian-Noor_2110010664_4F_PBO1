@@ -12,21 +12,20 @@ package PBO;
 class Komputer extends Barang {
     // Atribut
     private String merk;
-    
+
     // Constructor
     public Komputer(String nama, int harga, String merk) {
         super(nama, harga);
         this.merk = merk;
     }
-    
-    // Accessor untuk mendapatkan nilai atribut merk
+
+    // Accessor (getter) untuk mendapatkan nilai atribut merk
     public String getMerk() {
         return merk;
     }
-    
-     // Mutator untuk mengubah nilai atribut merk
+
+    // Mutator (setter) untuk mengubah nilai atribut merk
     public void setMerk(String merk) {
         this.merk = merk;
     }
-    
 }
