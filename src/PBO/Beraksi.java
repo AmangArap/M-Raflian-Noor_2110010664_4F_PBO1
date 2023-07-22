@@ -30,6 +30,7 @@ public class Beraksi {
 
         // Menggunakan seleksi dan perulangan untuk mencari barang
         Scanner scanner = new Scanner(System.in);
+        boolean isLanjut = true;
         System.out.print("Masukkan nama barang yang dicari: ");
         try {
             String input = scanner.nextLine();
@@ -55,7 +56,11 @@ public class Beraksi {
         } catch (Exception e) {
             System.out.println("Terjadi kesalahan: " + e.getMessage());
         }
-    }
+        // Menanyakan apakah pengguna ingin melanjutkan mencari barang atau tidak
+            System.out.print("Cari barang lagi? (y/n): ");
+            String jawaban = scanner.nextLine();
+            isLanjut = jawaban.equalsIgnoreCase("y");
+        }
 
     // Method untuk memeriksa apakah sebuah string adalah angka
     public static boolean isNumeric(String str) {
