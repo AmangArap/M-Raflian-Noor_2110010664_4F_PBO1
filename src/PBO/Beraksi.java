@@ -24,13 +24,15 @@ public class Beraksi {
 
         // Membuat objek TokoKomputer (Object)
         TokoKomputer toko = new TokoKomputer(daftarBarang);
-
-        // Menampilkan daftar barang (IO Sederhana)
-        toko.tampilkanDaftarBarang();
-
         // Menggunakan seleksi dan perulangan untuk mencari barang
         Scanner scanner = new Scanner(System.in);
         boolean isLanjut = true;
+        
+        while (isLanjut) {
+           // Menampilkan daftar barang (IO Sederhana)
+        toko.tampilkanDaftarBarang();
+
+        
         System.out.print("Masukkan nama barang yang dicari: ");
         try {
             String input = scanner.nextLine();
@@ -60,10 +62,12 @@ public class Beraksi {
             System.out.print("Cari barang lagi? (y/n): ");
             String jawaban = scanner.nextLine();
             isLanjut = jawaban.equalsIgnoreCase("y");
+        } 
         }
+        
 
     // Method untuk memeriksa apakah sebuah string adalah angka
     public static boolean isNumeric(String str) {
-        return str.matches("-?\\d+(\\.\\d+)?");
+        return str.matches("-?\\d+(\\.\\d+)?");  
+        }
     }
-}
